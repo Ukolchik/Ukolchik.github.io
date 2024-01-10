@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!link rel="stylesheet" href="styles.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Туристический сайт</title>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="navbar">
+            <img src="pp.png" width="180" padding: 0px 0px 0px 0px height="130" alt="Логотип компании">
+            <h1>Туристический сайт</h1>
+            <nav>
+                <a href="#" onclick="openOrderModal()">Личный кабинет</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Область для всплывающих уведомлений -->
+    <div class="alerts">
+        <!-- Здесь будут всплывать уведомления (если есть) -->
+    </div>
+
+    <!-- Блок с изображением и описанием компании -->
+    <section class="company-info">
+        <p>Описание компании...</p>
+    </section>
+
+    <!-- Блок с информацией о достоинствах компании -->
+    <section class="company-advantages">
+        <!-- Информация о достоинствах компании -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Наши достоинства</h2>
+                    <ul>
+                        <li>Высококвалифицированные гиды</li>
+                        <li>Уникальные маршруты</li>
+                        <li>Индивидуальный подход к каждому клиенту</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2>Почему выбирают нас</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla ut elit non euismod. Integer ut justo sit amet urna luctus hendrerit. Integer imperdiet nisl vel turpis accumsan, et fringilla mauris bibendum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок с данными о пешеходных маршрутах города Москвы -->
+    <section class="routes">
+        <!-- Данные о пешеходных маршрутах -->
+        <div class="container">
+            <h2>Пешеходные маршруты Москвы</h2>
+            <!-- Форма для поиска маршрутов -->
+            <form id="searchForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="routeName">Поиск по названию:</label>
+                        <input type="text" id="routeName" name="routeName">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="landmark">Поиск по достопримечательности:</label>
+                        <select id="landmark" name="landmark">
+                            <option value="">Выберите достопримечательность</option>
+                            <!-- Здесь добавьте варианты достопримечательностей -->
+                        </select>
+                    </div>
+                </div>
+                <button type="button" onclick="searchRoutes()">Искать</button>
+            </form>
+            <!-- Навигационная панель (пагинация) -->
+            <div class="pagination">
+                <!-- Здесь будет отображаться пагинация (если есть результаты поиска) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма для поиска гидов -->
+    <section class="search-guides">
+        <!-- Форма для поиска гидов по знанию иностранных языков и опыту работы -->
+        <div class="container">
+            <h2>Поиск гидов</h2>
+            <form id="guideSearchForm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="language">Знание языков:</label>
+                        <select id="language" name="language">
+                            <option value="russian">Русский</option>
+                            <option value="english">Английский</option>
+                            <option value="china">Китайский</option>
+                            <!-- Добавьте другие языки по мере необходимости -->
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="experience">Опыт работы:</label>
+                        <input type="number" id="experience" name="experience" min="0">
+                    </div>
+                </div>
+                <button type="button" onclick="searchGuides()">Искать</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Блок со списком доступных гидов -->
+    <section class="guides">
+        <!-- Список гидов -->
+        <div class="container">
+            <h2>Доступные гиды</h2>
+            <ul id="guidesList">
+                <!-- Здесь будут отображаться гиды (если есть результаты поиска) -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Блок с кнопкой "Оформить заявку" и модальным окном -->
+    <section class="order-section">
+        <button onclick="openOrderModal()">Оформить заявку</button>
+        <!-- Модальное окно для оформления заявки -->
+        <div class="modal" id="orderModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeOrderModal()">&times;</span>
+                <h2>Оформление заявки</h2>
+                <form id="orderForm" onsubmit="submitOrderForm(event)">
+                    <label for="selectedRoute">Маршрут:</label>
+                    <input type="text" id="selectedRoute" name="selectedRoute" readonly>
+
+                    <label for="selectedGuide">Гид:</label>
+                    <input type="text" id="selectedGuide" name="selectedGuide" readonly>
+
+                    <label for="tourDate">Дата экскурсии:</label>
+                    <input type="date" id="tourDate" name="tourDate" required>
+
+                    <label for="startTime">Время начала экскурсии:</label>
+                    <input type="time" id="startTime" name="startTime" required>
+
+                    <label for="duration">Длительность экскурсии:</label>
+                    <select id="duration" name="duration" required>
+                        <option value="1">1 час</option>
+                        <option value="2">2 часа</option>
+                        <option value="3">3 часа</option>
+                        <!-- Добавьте другие варианты по мере необходимости -->
+                    </select>
+
+                    <label for="groupSize">Количество человек в группе:</label>
+                    <input type="number" id="groupSize" name="groupSize" min="1" required>
+
+                    <label>Дополнительные опции:</label>
+                    <div>
+                        <input type="checkbox" id="option1" name="additionalOptions" value="option1">
+                        <label for="option1">Дополнительная опция 1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option2" name="additionalOptions" value="option2">
+                        <label for="option2">Дополнительная опция 2</label>
+                    </div>
+                    <!-- Добавьте другие дополнительные опции по мере необходимости -->
+
+                    <div>
+                        <label for="totalCost">Итоговая стоимость:</label>
+                        <span id="totalCost">0.00</span> руб.
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit">Отправить</button>
+                        <button type="button" onclick="closeOrderModal()">Отменить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер с контактными данными -->
+    <footer>
+        <p class="contact-info">Контактная информация...</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
