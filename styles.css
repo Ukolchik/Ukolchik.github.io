@@ -32,7 +32,7 @@ h1 {
 }
 
 header {
-    background-color: #808080;
+    background-color: #007fff;
     color: #fff;
     padding: 5px 0;
     text-align: center;
@@ -155,7 +155,7 @@ nav a:hover {
 }
 
 footer {
-    background-color: #808080;
+    background-color: #007fff;
     padding: 0px;
     text-align: center;
     color: #fff;
