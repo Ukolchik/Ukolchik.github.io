@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Туристический сайт</title>
+    <title>LuckyTours</title>
 </head>
 <body>
     <!-- Шапка сайта -->
     <header>
         <div class="navbar">
             <img src="pp.png" width="180" padding: 0px 0px 0px 0px height="130" alt="Логотип компании">
-            <h1>Туристический сайт</h1>
+            <div class="titl">
+                <h1>LuckyTours</h1>
+                <p class="pp">экскурсии по Москве</p>
+            </div>
             <nav>
-                <a href="#" onclick="openOrderModal()">Личный кабинет</a>
+                <a class="makeorder" href="#" onclick="openOrderModal()">Оформить заявку</a>
+            </nav>
+            <nav>
+                <a class="lk" href="#" onclick="openProfileModal()">Личный кабинет</a>
             </nav>
         </div>
     </header>
@@ -26,7 +32,13 @@
 
     <!-- Блок с изображением и описанием компании -->
     <section class="company-info">
-        <p>Описание компании</p>
+        <p>Добро пожаловать в захватывающий мир старинных кремлевских стен и мерцающих небоскребов! Наша туристическая компания приглашает вас на увлекательные экскурсии по Москве, где история встречает современность. Погрузитесь в атмосферу Красной Площади, ощутите величие Кремля и насладитесь магией богатого культурного наследия России. Наши гиды сделают ваше путешествие незабываемым, раскрывая тайны города, от архитектурных шедевров до традиционной русской кухни. Встречайте Москву с нами и создайте свои неповторимые воспоминания!</p>
+        <div>
+            <img src="boss.jpg" width="230" height=" 300" alt="наш босс">
+            <p>Альберт Альбертович
+                (основатель)
+            </p>
+        </div>
     </section>
 
     <!-- Блок с информацией о достоинствах компании -->
@@ -42,16 +54,17 @@
                         <li>Индивидуальный подход к каждому клиенту</li>
                     </ul>
                 </div>
-                <div class="col-md-6">
-                    <h2>Почему выбирают нас</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla ut elit non euismod. Integer ut justo sit amet urna luctus hendrerit. Integer imperdiet nisl vel turpis accumsan, et fringilla mauris bibendum.</p>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Блок с данными о пешеходных маршрутах города Москвы -->
     <section class="routes">
+        <div class="map">
+            <h2>Интерактивная карта</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8979.529596680828!2d37.61382389567808!3d55.76054507460547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1704552484106!5m2!1sru!2sru"
+            width="1000" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="border border-black"></iframe>
+        </div>
         <!-- Данные о пешеходных маршрутах -->
         <div class="container">
             <h2>Пешеходные маршруты Москвы</h2>
@@ -66,7 +79,8 @@
                         <label for="landmark">Поиск по достопримечательности:</label>
                         <select id="landmark" name="landmark">
                             <option value="">Выберите достопримечательность</option>
-                            <!-- Здесь добавьте варианты достопримечательностей -->
+                            <option value="">Кремль</option>
+                            <option value="">ВДНХ</option>
                         </select>
                     </div>
                 </div>
@@ -92,12 +106,11 @@
                             <option value="russian">Русский</option>
                             <option value="english">Английский</option>
                             <option value="china">Китайский</option>
-                            <!-- Добавьте другие языки по мере необходимости -->
                         </select>
                     </div>
                     <div class="col-md-6">
                         <label for="experience">Опыт работы:</label>
-                        <input type="number" id="experience" name="experience" min="0">
+                        <input type="number" id="experience" name="experience" min="0" max="20">
                     </div>
                 </div>
                 <button type="button" onclick="searchGuides()">Искать</button>
@@ -108,10 +121,21 @@
     <!-- Блок со списком доступных гидов -->
     <section class="guides">
         <!-- Список гидов -->
-        <div class="container">
+        <div class="containergid">
             <h2>Доступные гиды</h2>
             <ul id="guidesList">
-                <!-- Здесь будут отображаться гиды (если есть результаты поиска) -->
+                <div class="gid">
+                    <img width="100px" height="100px" src="boss.jpg" alt="">
+                    <p>Олег Бибизянович</p>
+                </div>>
+                <div class="gid">
+                    <img width="100px" height="100px" src="boss.jpg" alt="">
+                    <p>Ольга Бибизяновна</p>
+                </div>>
+                <div class="gid">
+                    <img width="100px" height="100px" src="boss.jpg" alt="">
+                    <p>Олег Бибизянович</p>
+                </div>>
             </ul>
         </div>
     </section>
@@ -124,13 +148,17 @@
             <div class="modal-content">
                 <span class="close" onclick="closeOrderModal()">&times;</span>
                 <h2>Оформление заявки</h2>
-                <form id="orderForm" onsubmit="submitOrderForm(event)">
+                <form id="orderForm" class="Form" onsubmit="submitOrderForm(event)">
                     <label for="selectedRoute">Маршрут:</label>
-                    <input type="text" id="selectedRoute" name="selectedRoute" readonly>
-
+                    <select type="text" id="selectedRoute" name="selectedRoute" required>
+                        <option value="Kreml">Кремль</option>
+                        <option value="VDNH">ВДНХ</option>
+                    </select>
                     <label for="selectedGuide">Гид:</label>
-                    <input type="text" id="selectedGuide" name="selectedGuide" readonly>
-
+                    <select type="text" id="selectedGuide" name="selectedGuide" required>
+                        <option value="1">Олег Бибизянович</option>
+                        <option value="2">Ольга Бибизяновна</option>
+                    </select>
                     <label for="tourDate">Дата экскурсии:</label>
                     <input type="date" id="tourDate" name="tourDate" required>
 
@@ -142,11 +170,10 @@
                         <option value="1">1 час</option>
                         <option value="2">2 часа</option>
                         <option value="3">3 часа</option>
-                        <!-- Добавьте другие варианты по мере необходимости -->
                     </select>
 
                     <label for="groupSize">Количество человек в группе:</label>
-                    <input type="number" id="groupSize" name="groupSize" min="1" required>
+                    <input type="number" id="groupSize" name="groupSize" min="1" max="20" required>
 
                     <label>Дополнительные опции:</label>
                     <div>
@@ -175,7 +202,9 @@
 
     <!-- Футер с контактными данными -->
     <footer>
-        <p class="contact-info">Контактная информация...</p>
+        <p class="contact-info">Контактная информация</p>
+        <p>Почта: makar.pryamilov2004@gmail.com</p>
+        <p>Номер телефона: 8(900)123-12-34</p>
     </footer>
 
     <script src="script.js"></script>

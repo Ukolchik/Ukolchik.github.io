@@ -7,6 +7,28 @@ body {
 
 h1 {
     margin-left: 50px;
+    margin-bottom: 2px;
+}
+
+.titl {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    .pp {
+        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+}
+
+.makeorder {
+    margin-left: 400px;
+}
+
+.lk {
+    margin-left: 100px;
 }
 
 header {
@@ -16,10 +38,15 @@ header {
     text-align: center;
 }
 
+
+
 .navbar {
     display: flex;
     justify-content: space-start;
     align-items: center;
+    img {
+        margin-left: 20px;
+    }
 }
 
 nav a {
@@ -37,6 +64,31 @@ nav a:hover {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.containergid {
+    max-width: 1200px;
+    margin-bottom: 100px;
+}
+
+.gid {
+    display: flex;
+    gap: 5px;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.company-info {
+    display: flex;
+    margin-left: 50px;
+    width: 1100px;
+    gap: 80px;
+    margin-top: 30px;
 }
 
 .section {
@@ -60,6 +112,11 @@ nav a:hover {
 
 .button:hover {
     background-color: #555;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
 }
 
 .modal {
@@ -99,7 +156,7 @@ nav a:hover {
 
 footer {
     background-color: #333;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
     color: #fff;
     position: fixed;
