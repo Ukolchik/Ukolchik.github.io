@@ -226,7 +226,7 @@ function walkingRouteBtnHandler(event) {
             guidesRouteName.innerHTML = route.name;
         }
     }
-    let url = new URL(`http://exam-2023-1-api.std-900.ist.mospolytech.ru/api/routes/${routeId}/guides`);
+    let url = new URL(`https://edu.std-900.ist.mospolytech.ru/api/routes/${routeId}/guides`);
     url.searchParams.append('api_key', api_key);
     let xhr = new XMLHttpRequest();
     xhr.open('GET', url.toString());
@@ -338,7 +338,7 @@ function modalBtnSendHandler() {
     if (!dataCorrectnessCheck())
         return;
     console.log(sendData);
-    let url = new URL("http://exam-2023-1-api.std-900.ist.mospolytech.ru/api/orders");
+    let url = new URL("https://edu.std-900.ist.mospolytech.ru/api/orders");
     url.searchParams.append('api_key', api_key);
     let xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
