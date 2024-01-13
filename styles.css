@@ -6,8 +6,52 @@ body {
 }
 
 h1 {
+    color: white;
     margin-left: 50px;
     margin-bottom: 2px;
+}
+
+a {
+    text-decoration:none;
+}
+
+.request {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.our {
+    margin-left: 500px;
+    margin-top: 50px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    width: 300px;
+}
+
+.dostoinstva {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 1000px;
+    margin-left: 130px;
+    margin-top: 60px;
+}
+
+.tabl {
+    width: 800px;
+    background-color: #ddd;
+}
+
+.foot {
+    margin-top: 218px;
 }
 
 .titl {
@@ -24,11 +68,11 @@ h1 {
 }
 
 .makeorder {
-    margin-left: 400px;
+    margin-left: 350px;
 }
 
 .lk {
-    margin-left: 100px;
+    margin-right: 50px;
 }
 
 header {
@@ -76,6 +120,9 @@ nav a:hover {
     gap: 5px;
 }
 
+#application-delete-modal .modal-header, #application-delete-modal .modal-footer {
+    border: none;
+  }
 .map {
     display: flex;
     flex-direction: column;
@@ -122,7 +169,6 @@ nav a:hover {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
@@ -136,7 +182,7 @@ nav a:hover {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #ddd;
-    width: 50%;
+    width: 70%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -159,7 +205,7 @@ footer {
     padding: 0px;
     text-align: center;
     color: #fff;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
+
