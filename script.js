@@ -283,46 +283,6 @@ function modalHourBtnHandler(event) {
     input.value = "";
     input.value = String(countHours);
 }
-//функция обрабатывает данные из полей ввода в модальном окне.
-function appFormModalHandler() { 
-    const hoursNumber = document.querySelector('.modal-hour-input');
-    const date = document.querySelector('.modal-date-input');
-    const time = document.querySelector('.modal-time-input');
-    const peopleCount = document.querySelector('.modal-people-count-input');
-    const fast = document.querySelector('.modal-fast-checkbox');
-    const transfer = document.querySelector('.modal-transfer-checkbox');
-    let isThisDayOff = 1;
-    let isItMorning = 0;
-    let isItEvening = 0;
-    let fastCoef = 1;
-    let transferCoef = 1;
-    let priceNumberOfVisitors = 0;
-    if (new Date(date.value).getDay() in [0, 6] || String(new Date(date.value)) in
-        ['2024-01-01', '2024-01-02', '2024-01-03', '2024-01-04', '2024-01-05', '2024-01-08', '2024-02-23', '2024-03-08', '2024-04-29',
-            '2024-04-30', '2024-05-01', '2024-05-09', '2024-05-10', '2024-06-12', '2024-11-04', '2024-12-30', '2024-12-31'])
-        isThisDayOff = 1.5;
-    if (time.value >= '09:00' && time.value <= '12:00')
-        isItMorning = 400;
-    if (time.value >= '20:00' && time.value <= '23:00')
-        isItEvening = 1000;
-    if (Number(peopleCount.value) >= 1 && Number(peopleCount.value) < 5)
-        priceNumberOfVisitors = 0;
-    else if (Number(peopleCount.value) >= 5 && Number(peopleCount.value) < 10)
-        priceNumberOfVisitors = 1000;
-    else
-        priceNumberOfVisitors = 1500;
-    if (fast.checked)
-        fastCoef = 1.3;
-    if (transfer.checked) {
-        if ([1, 2, 3, 4, 5].includes(new Date(date.value).getDay())) {
-            transferCoef = 1.3;
-        }
-        else {
-            transferCoef = 1.25;
-        }
-    }
-    updatePrice();
-}
 //функция вызывается при нажатии кнопки отправки заявки.
 function modalBtnSendHandler() { 
     if (!dataCorrectnessCheck())
@@ -342,20 +302,6 @@ function modalBtnSendHandler() {
     };
 }
 
-function languageBtnHandler(event) {
-    const target = event.target;
-    const input = document.querySelector('.language-input');
-    const guideExpFromInput = document.querySelector('#guide-exp-from-input');
-    const guideExpToInput = document.querySelector('#guide-exp-to-input');
-    let language = target.classList[target.classList.length - 1].slice(9);
-    input.value = "";
-    input.value = String(language);
-    if (Number(guideExpFromInput.value) >= 0 && Number(guideExpToInput.value) >= 0) {
-        let from = Number(guideExpFromInput.value) ? Number(guideExpFromInput.value) : 0;
-        let to = Number(guideExpToInput.value) ? Number(guideExpToInput.value) : 999;
-        renderGuides(language.toLowerCase(), from, to);
-    }
-}
 function guideInputHandler(event) {
     const guideExpFromInput = document.querySelector('#guide-exp-from-input');
     const guideExpToInput = document.querySelector('#guide-exp-to-input');
