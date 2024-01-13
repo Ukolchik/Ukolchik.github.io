@@ -3,6 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>LuckyTours</title>
@@ -11,16 +15,13 @@
     <!-- Шапка сайта -->
     <header>
         <div class="navbar">
-            <img src="pp.png" width="180" padding: 0px 0px 0px 0px height="130" alt="Логотип компании">
+            <img src="pp.png" width="180" height="130" alt="Логотип компании">
             <div class="titl">
-                <h1>LuckyTours</h1>
+                <a href="index.html"><h1>LuckyTours</h1></a>
                 <p class="pp">экскурсии по Москве</p>
             </div>
             <nav>
-                <a class="makeorder" href="#" onclick="openOrderModal()">Оформить заявку</a>
-            </nav>
-            <nav>
-                <a class="lk" href="#" onclick="openProfileModal()">Личный кабинет</a>
+                <a class="lk" href="lk.html">Личный кабинет</a>
             </nav>
         </div>
     </header>
@@ -32,7 +33,7 @@
 
     <!-- Блок с изображением и описанием компании -->
     <section class="company-info">
-        <p>Добро пожаловать в захватывающий мир старинных кремлевских стен и мерцающих небоскребов! Наша туристическая компания приглашает вас на увлекательные экскурсии по Москве, где история встречает современность. Погрузитесь в атмосферу Красной Площади, ощутите величие Кремля и насладитесь магией богатого культурного наследия России. Наши гиды сделают ваше путешествие незабываемым, раскрывая тайны города, от архитектурных шедевров до традиционной русской кухни. Встречайте Москву с нами и создайте свои неповторимые воспоминания!</p>
+        <p>"Добро пожаловать в захватывающий мир старинных кремлевских стен и мерцающих небоскребов! Наша туристическая компания приглашает вас на увлекательные экскурсии по Москве, где история встречает современность. Погрузитесь в атмосферу Красной Площади, ощутите величие Кремля и насладитесь магией богатого культурного наследия России. Наши гиды сделают ваше путешествие незабываемым, раскрывая тайны города, от архитектурных шедевров до традиционной русской кухни. Встречайте Москву с нами и создайте свои неповторимые воспоминания!"</p>
         <div>
             <img src="boss.jpg" width="230" height=" 300" alt="наш босс">
             <p>Альберт Альбертович
@@ -42,108 +43,214 @@
     </section>
 
     <!-- Блок с информацией о достоинствах компании -->
-    <section class="company-advantages">
-        <!-- Информация о достоинствах компании -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Наши достоинства</h2>
-                    <ul>
-                        <li>Высококвалифицированные гиды</li>
-                        <li>Уникальные маршруты</li>
-                        <li>Индивидуальный подход к каждому клиенту</li>
-                    </ul>
-                </div>
+    <h2 class="our">Наши достоинства</h2>
+    <div>
+        <div class="dostoinstva">
+            <div>
+                <h3>Экспертное знание местных<br/>достопримечательностей</h3>
+                <p class="box">Тур компания обладает глубоким знанием истории, культуры и интересных мест в Москве, предоставляя участникам увлекательные и информативные экскурсии.</p>
+            </div>
+            <div>
+                <h3>Персонализированный подход</h3>
+                <p class="box">Тур компания способна адаптировать экскурсии под различные интересы и потребности клиентов, обеспечивая индивидуальные и групповые программы.</p>
+            </div>
+            <div>
+                <h3>Комфортная логистика</h3>
+                <p class="box">Организация транспортных средств и оптимизированные маршруты обеспечивают клиентам максимальный комфорт во время экскурсий, минимизируя время в пути и увеличивая время, проведенное на достопримечательностях.</p>
             </div>
         </div>
-    </section>
-
+        <div class="dostoinstva">
+            <div>
+                <h3>Профессиональные гиды</h3>
+                <p class="box">Квалифицированные гиды обеспечивают интересные рассказы, комментарии и ответы на вопросы участников, делая экскурсии более познавательными и увлекательными.</p>
+            </div>
+            <div>
+                <h3>Разнообразие тематик и маршрутов</h3>
+                <p class="box">Тур компания предлагает разнообразные экскурсии, охватывающие исторические, культурные, архитектурные и развлекательные аспекты Москвы, удовлетворяя различные интересы клиентов.</p>
+            </div>
+            <div>
+                <h3>Инфраструктурная поддержка</h3>
+                <p class="box">Тур компания обеспечивает поддержку в организации посещения различных мест, включая бронирование билетов, организацию перекусов и обеспечение участников всей необходимой информацией.</p>
+            </div>
+        </div>
+    </div>
     <!-- Блок с данными о пешеходных маршрутах города Москвы -->
     <section class="routes">
         <div class="map">
-            <h2>Интерактивная карта</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8979.529596680828!2d37.61382389567808!3d55.76054507460547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1704552484106!5m2!1sru!2sru"
-            width="1000" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="border border-black"></iframe>
+
+            <h3 class="third-title fw-bold my-4">Интерактивная карта</h3>
+            <a class="dg-widget-link"
+                href="http://2gis.ru/moscow/profiles/4504128908445240,4504127908471722/center/37.61783123016358,55.75291205743683/zoom/15?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть
+                на карте Москвы</a>
+            <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+            <script
+                charset="utf-8">new DGWidgetLoader({ "width": 600, "height": 450, "borderColor": "#a3a3a3", "pos": { "lat": 55.75291205743683, "lon": 37.61783123016358, "zoom": 15 }, "opt": { "city": "moscow" }, "org": [{ "id": "4504128908445240" }, { "id": "4504127908471722" }] });</script>
+            <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript.
+                ....</noscript>
+            <br>
         </div>
-        <!-- Данные о пешеходных маршрутах -->
-        <div class="container">
-            <h2>Пешеходные маршруты Москвы</h2>
-            <!-- Форма для поиска маршрутов -->
-            <form id="searchForm">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="routeName">Поиск по названию:</label>
-                        <input type="text" id="routeName" name="routeName">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="landmark">Поиск по достопримечательности:</label>
-                        <select id="landmark" name="landmark">
-                            <option value="">Выберите достопримечательность</option>
-                            <option value="">Кремль</option>
-                            <option value="">ВДНХ</option>
-                        </select>
-                    </div>
-                </div>
-                <button type="button" onclick="searchRoutes()">Искать</button>
-            </form>
-            <!-- Навигационная панель (пагинация) -->
-            <div class="pagination">
-                <!-- Здесь будет отображаться пагинация (если есть результаты поиска) -->
+    </section>
+    <div id="walking-routes" class="walking-routes mt-5">
+        <div class="fs-3 fw-bold text">
+            Список маршрутов
+        </div>
+        <div class="page-of-pages">
+        </div>
+        <div class="inputs my-3 d-flex flex-column flex-sm-row">
+            <div class="input-group input-group-find">
+                <input id="find-route-input" type="text" class="form-control" placeholder="Поиск по названию"
+                    aria-label="" aria-describedby="find-route">
+                <button class="btn btn-outline-success" type="button" id="find-route-btn">Найти</button>
             </div>
         </div>
-    </section>
+        <div class="table-responsive">
+            <table class="walking-routes-table table table-hover table-bordered text-center table-warning">
+                <thead>
+                    <tr class="table-active">
+                        <th scope="col">Название</th>
+                        <th scope="col">Описание</th>
+                        <th scope="col">Основные объекты</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="walking-routes-tbody">
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-center">
+            <nav aria-label="Page navigation">
+                <ul id="pagination-walking-routes" class="pagination pagination-walking-routes">
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="guides-container" class="guides-container mt-5 d-none">
+        <div class="fs-3 fw-bold">
+            Доступные гиды по маршруту <span id="guides-route-name"
+                class="guides-route-name text-decoration-underline">Название маршрута</span>
+        </div>
+        <div class="inputs my-3 d-flex flex-column flex-sm-row">
+            <div class="input-group w-25">
+                <input type="text" class="form-control language-input" aria-label="Text input with dropdown button"
+                    placeholder="Язык экскурсии">
+                <button class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false"></button>
+                <ul id="language-dropdown-menu" class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="index.html#">Action</a></li>
+                    <li><a class="dropdown-item" href="index.html#">Another action</a></li>
+                    <li><a class="dropdown-item" href="index.html#">Something else</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="index.html#">Separated link</a></li>
+                </ul>
+            </div>
 
-    <!-- Форма для поиска гидов -->
-    <section class="search-guides">
-        <!-- Форма для поиска гидов по знанию иностранных языков и опыту работы -->
-        <div class="container">
-            <h2>Поиск гидов</h2>
-            <form id="guideSearchForm">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="language">Знание языков:</label>
-                        <select id="language" name="language">
-                            <option value="russian">Русский</option>
-                            <option value="english">Английский</option>
-                            <option value="china">Китайский</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="experience">Опыт работы:</label>
-                        <input type="number" id="experience" name="experience" min="0" max="20">
-                    </div>
+            <div class="expirience-container ms-0 ms-sm-5 mt-3 mt-sm-0 d-flex align-items-center">
+                <div class="expirience-text">Опыт работы</div>
+                <div class="expirience-from-to d-flex">
+                    <input id="guide-exp-from-input" type="text" class="form-control mx-3 exp-input" placeholder="От" aria-label="">
+                    <input id="guide-exp-to-input" type="text" class="form-control exp-input" placeholder="До" aria-label="">
                 </div>
-                <button type="button" onclick="searchGuides()">Искать</button>
-            </form>
+            </div>
         </div>
-    </section>
-
-    <!-- Блок со списком доступных гидов -->
-    <section class="guides">
-        <!-- Список гидов -->
-        <div class="containergid">
-            <h2>Доступные гиды</h2>
-            <ul id="guidesList">
-                <div class="gid">
-                    <img width="100px" height="100px" src="boss.jpg" alt="">
-                    <p>Олег Бибизянович</p>
-                </div>>
-                <div class="gid">
-                    <img width="100px" height="100px" src="boss.jpg" alt="">
-                    <p>Ольга Бибизяновна</p>
-                </div>>
-                <div class="gid">
-                    <img width="100px" height="100px" src="boss.jpg" alt="">
-                    <p>Олег Бибизянович</p>
-                </div>>
-            </ul>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered text-center">
+                <thead>
+                    <tr class="table-active">
+                        <th scope="col"></th>
+                        <th scope="col">ФИО</th>
+                        <th scope="col">Языки</th>
+                        <th scope="col">Опыт работы</th>
+                        <th scope="col">Стоимость услуг в час</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="guides-tbody">
+                </tbody>
+            </table>
         </div>
-    </section>
-
-    <!-- Блок с кнопкой "Оформить заявку" и модальным окном -->
-    <section class="order-section">
-        <button onclick="openOrderModal()">Оформить заявку</button>
-        <!-- Модальное окно для оформления заявки -->
+    </div>
+    <div class="modal fade" id="application-formalization-modal" tabindex="-1" aria-labelledby="ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg application-formalization-modal">
+            <div class="modal-content app-form-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalLabel">Оформление заявки</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-bio">ФИО гида: </div>
+                    <div class="modal-walking-route-name">Название маршрута: </div>
+                    <div class="modal-time-container py-2 d-flex flex-column flex-sm-row justify-content-between">
+                        <div class="modal-date-container">
+                            <div class="modal-date-title mb-1">Дата экскурсии:</div>
+                            <input type="date" name="date" class="form-control rounded px-2 modal-date-input"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="modal-time-container">
+                            <div class="modal-time-title mb-1">Время начала:</div>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="time" name="time" class="form-control rounded px-2 modal-time-input"
+                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+                                    min="09:00:00" max="23:00:00">
+                            </div>
+                        </div>
+                        <div class="modal-duration-container">
+                            <div class="modal-duration mb-1">Время экскурсии:</div>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="text" class="form-control modal-hour-input"
+                                    aria-label="Text input with dropdown button">
+                                <button class="btn btn-outline-success dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    id="inputGroup-sizing-sm"></button>
+                                <ul class="dropdown-menu dropdown-menu-end modal-hour-dropdown-menu">
+                                    <li><a class="dropdown-item modal-hour-btn modal-hour-1">1 час</a></li>
+                                    <li><a class="dropdown-item modal-hour-btn modal-hour-2">2 часа</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-people-count-container">
+                        <div class="modal-people-count">Количество человек: </div>
+                        <div class="input-group input-group-sm mb-3 w-25">
+                            <input type="number" class="form-control modal-people-count-input"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" min="1"
+                                max="20" value="1">
+                        </div>
+                    </div>
+                    <div class="modal-additional-options-container">
+                        <div class="modal-additional-options-title fs-5">Дополнительные опции: </div>
+                        <div class="modal-options-container d-flex flex-column flex-sm-row mt-2 mb-3">
+                            <div class="modal-option me-5">
+                                <div class="form-check">
+                                    <input class="form-check-input modal-fast-checkbox" type="checkbox" value=""
+                                        id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Быстрый выезд гида (в течение часа)
+                                    </label>
+                                </div>
+                                <div class="modal-option-description">Увеличивает стоимость на 30% <span
+                                        class="modal-option-fast-extra"></span></div>
+                            </div>
+                            <div class="modal-option">
+                                <div class="modal-option-description">Тематические сувениры для посетителей. Стоимость увеличивается на 500 рублей для
+                                    каждого посетителя<span
+                                        class="modal-option-transfer-extra"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-final-value">Итоговая стоимость: 0₽</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Отменить</button>
+                    <button type="button" class="btn btn-success modal-btn-send"
+                        data-bs-dismiss="modal">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+        <!-- 
         <div class="modal" id="orderModal">
             <div class="modal-content">
                 <span class="close" onclick="closeOrderModal()">&times;</span>
@@ -184,7 +291,6 @@
                         <input type="checkbox" id="option2" name="additionalOptions" value="option2">
                         <label for="option2">Дополнительная опция 2</label>
                     </div>
-                    <!-- Добавьте другие дополнительные опции по мере необходимости -->
 
                     <div>
                         <label for="totalCost">Итоговая стоимость:</label>
@@ -198,7 +304,7 @@
                 </form>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Футер с контактными данными -->
     <footer>
@@ -208,5 +314,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
