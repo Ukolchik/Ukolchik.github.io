@@ -10,7 +10,7 @@ let currentPage = 1;
 let maxPage = 1;
 // Функция для обработки маршрутов
 function walkingRoutesHandler() {
-    let url = new URL("http://exam-2023-1-api.std-900.ist.mospolytech.ru/api/routes");
+    let url = new URL("https://edu.std-900.ist.mospolytech.ru/api/routes");
     url.searchParams.append('api_key', api_key);
     let xhr = new XMLHttpRequest();
     xhr.open('GET', url.toString());
